@@ -1,0 +1,171 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+		Width="400"
+		Height="500"
+        x:Class="app.MainWindow"
+        Title="app"
+		Background="Sienna">
+	<StackPanel>
+	    <!--First GRID FOR IP and Port It Contains 2 Text Box and 2 LABEL-->
+		<Grid	ColumnDefinitions="70 170"
+					RowDefinitions="40 40 "
+					ShowGridLines="False"
+					VerticalAlignment="Center"
+					HorizontalAlignment="Center"
+					Margin="10">
+				<Label
+					Grid.Column="0"
+					Grid.Row="0"
+					Width="65"
+					Height="30"
+					VerticalAlignment="Center"
+					HorizontalAlignment="Center"
+					VerticalContentAlignment="Center"
+					HorizontalContentAlignment="Center"
+					Margin="10"
+					BorderBrush="Black"
+					Background="SeaShell"
+					Foreground="Black"
+					FontWeight="Bold"
+					BorderThickness="2"
+					>
+					ID
+					</Label>
+				<TextBox Name="IdBox"
+					Grid.Column="1"
+					Grid.Row="0"
+					Width="150"
+					VerticalAlignment="Center"
+					HorizontalAlignment="Center"
+					BorderBrush="Black"
+					Background="LightGoldenrodYellow"
+					BorderThickness="2"></TextBox>
+
+				<Label
+					Grid.Column="0"
+					Grid.Row="1"
+					Width="85"
+					Height="30"
+					VerticalAlignment="Center"
+					HorizontalAlignment="Center"
+					VerticalContentAlignment="Center"
+					HorizontalContentAlignment="Center"
+					Margin="5 10 10 10"
+					BorderBrush="Black"
+					Background="SeaShell"
+					Foreground="Black"
+					FontWeight="Bold"
+					BorderThickness="2"
+					>
+					UserName
+					</Label>
+				<TextBox Name="UsernameBox"
+					Grid.Column="1"
+					Grid.Row="1"
+					Width="150"
+					Margin="10"
+					VerticalAlignment="Center"
+					HorizontalAlignment="Center"
+					BorderBrush="Black"
+					Background="LightGoldenrodYellow"
+					BorderThickness="2"></TextBox>
+			</Grid>
+		<!--CHAT BOX-->
+		<TextBox Name="MainBox"
+			Width="300"
+			Height="250"
+			Margin="10 2 10 0"
+			BorderBrush="Black"
+			BorderThickness="3">
+		</TextBox>
+		<!--Connect button to conect with server-->
+		<Button Name="Connect"
+				Click="cont"
+				Width="95"
+				Height="35"
+				VerticalAlignment="Center"
+				HorizontalAlignment="Center"
+				VerticalContentAlignment="Center"
+				HorizontalContentAlignment="Center"
+				Margin="5 -50 5 5"
+				BorderBrush="Black"
+				Background="DarkBlue"
+				Foreground="Snow"
+				BorderThickness="2"
+				>
+			CONNECT
+		</Button>
+		<!--SECOND GRID FOR SENDING MESSAGE It Contains 1 Text Box and 1 Button-->
+		<Grid ColumnDefinitions="250 50"
+			  RowDefinitions="40 "
+			  ShowGridLines="False"
+			  Margin="40 0 0 0">
+			<TextBox Name="SendBox"
+				Grid.Column="0"
+				Grid.Row="0"
+				Width="230"
+				VerticalAlignment="Center"
+				HorizontalAlignment="Center"
+				BorderBrush="Black"
+				BorderThickness="2"
+				>
+			</TextBox>
+			<Button Name="sendbutton"
+				Click="sendbtn"
+				Grid.Column="1"
+				Grid.Row="0"
+				Width="65"
+				Height="30"
+				VerticalAlignment="Center"
+				HorizontalAlignment="Center"
+				VerticalContentAlignment="Center"
+				HorizontalContentAlignment="Center"
+				Margin="10"
+				BorderBrush="Black"
+				Background="DarkBlue"
+				Foreground="Snow"
+				BorderThickness="2"
+				>
+				SEND
+			</Button>
+		</Grid>
+		<!--SECOND GRID FOR SENDING Image It Contains 1 Text Box and 1 Button-->
+		<Grid ColumnDefinitions="250 50"
+			  RowDefinitions="40 "
+			  ShowGridLines="False"
+			  Margin="40 0 0 0">
+			<TextBox Name="imageBox"
+				Grid.Column="0"
+				Grid.Row="0"
+				Width="230"
+				VerticalAlignment="Center"
+				HorizontalAlignment="Center"
+				BorderBrush="Black"
+				BorderThickness="2"
+				>
+			</TextBox>
+			<Button Name="SendImage"
+					
+				Grid.Column="1"
+				Grid.Row="0"
+				Width="65"
+				Height="34"
+				VerticalAlignment="Center"
+				HorizontalAlignment="Center"
+				VerticalContentAlignment="Center"
+				HorizontalContentAlignment="Center"
+				Margin="10"
+				BorderBrush="Black"
+				Background="DarkBlue"
+				Foreground="Snow"
+				BorderThickness="2"
+				>
+				Image
+				</Button>
+		</Grid>
+
+	</StackPanel>
+</Window>
